@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // SVGs as React components
 import userImg from '../../images/user.png';
@@ -9,13 +9,47 @@ import { ReactComponent as GmailIcon } from '../../images/gmail.svg';
 // Styles
 import '../../styles/Home.css';
 
+const roles = ['Coder', 'Engineer', 'Developer'];
+
 const Home = () => {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [role, setRole] = useState('');
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const typingDelay = 150;
+    const erasingDelay = 100;
+    const newRoleDelay = 2200;
+
+    if (!deleting) {
+      if (role.length < roles[roleIndex].length) {
+        setTimeout(() => {
+          setRole(roles[roleIndex].substring(0, role.length + 1));
+        }, typingDelay);
+      } else {
+        setTimeout(() => {
+          setDeleting(true);
+        }, newRoleDelay);
+      }
+    } else {
+      if (role.length > 0) {
+        setTimeout(() => {
+          setRole(roles[roleIndex].substring(0, role.length - 1));
+        });
+      } else {
+        setDeleting(false);
+        setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+      }
+    }
+  }, [role, deleting, roleIndex]);
   return (
     <div className="home-container">
       <img src={userImg} alt="User" className="bg" />
       <div className="info-container">
         <div className="background-info">
-          <h1>Hello, World!</h1>
+          <h1>
+            Hi, I'm Juno <span className="dynamic-text">{role}</span>
+          </h1>
           <br />
           <p>
             My name is Junho Park, and I am an undergraduate student majoring in

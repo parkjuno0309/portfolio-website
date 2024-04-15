@@ -103,3 +103,23 @@
   border-radius: unset;
   animation: unset;
 }
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.dynamic-text {
+  border-right: 3px solid white;
+  margin-left: 25px;
+  padding-right: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-caret 0.7s step-end infinite;
+  color: rgb(252, 172, 2);
+}
