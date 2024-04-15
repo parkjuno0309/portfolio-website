@@ -1,0 +1,105 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-container .info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
+  position: relative;
+  left: 25%;
+  margin: 2rem;
+  padding: 0.5rem;
+  animation: fade-in 750ms, slide-left 750ms;
+}
+
+.home-container .info-container .background-info {
+  background: var(--primary-color);
+  box-shadow: 0 0 1rem 2rem var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+.home-container .info-container .background-info > h1,
+.home-container .info-container .background-info > p {
+  margin-top: 0;
+}
+
+.home-container .bg {
+  width: 600px;
+  height: 600px;
+  border-radius: 60%;
+  object-fit: cover;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid rgb(252, 172, 2);
+  z-index: 1;
+  animation: sway-border 3s infinite ease-in-out;
+}
+
+.home-container .info-container .social-links {
+  display: flex;
+  justify-content: space-around; /* This will space out the icons more evenly */
+  align-items: center;
+  bottom: -60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+@keyframes sway-border {
+  0%,
+  100% {
+    border-width: 6px;
+    border-color: rgb(252, 172, 2);
+  }
+  50% {
+    border-width: 6px;
+    border-color: #ccc;
+  }
+}
+
+.icon-link {
+  transition: transform 0.2s ease;
+  margin: 0 1rem;
+}
+
+/* The SVG inside the social link */
+.icon-link svg {
+  width: 30px; /* Larger size */
+  height: 30px;
+  fill: currentColor;
+}
+
+/* Initial color of the icon link (text color) */
+.icon-link {
+  color: white; /* White color */
+}
+
+/* Hover effect for the social link icons */
+.icon-link:hover {
+  color: #fecd02; /* Change to yellow on hover */
+  transform: scale(1.2); /* Scale up the icon */
+}
+
+.mobile .home-container {
+  flex-direction: column;
+}
+
+.mobile .home-container .info-container {
+  text-align: center;
+  width: auto;
+  position: unset;
+  background: unset;
+  box-shadow: unset;
+  border-radius: unset;
+  animation: unset;
+}

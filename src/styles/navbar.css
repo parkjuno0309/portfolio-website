@@ -51,5 +51,30 @@
 .desktopMenuBtn:hover {
   background: rgb(252, 172, 2);
   color: white;
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px 0 rgba(231, 231, 231, 0.2);
+}
+
+/* Override link and visited states for your navbar items */
+.navbar .desktopMenuListItem:link,
+.navbar .desktopMenuListItem:visited {
+  color: white; /* Set your desired color for the links */
+  text-decoration: none; /* If you don't want underlines */
+}
+
+/* You might also want to set hover and active states */
+.navbar .desktopMenuListItem:hover,
+.navbar .desktopMenuListItem:active {
+  color: white; /* Set your desired color for hover state */
+}
+
+/* Apply the same styles for your resume button if it's a link */
+.desktopMenuBtn:link,
+.desktopMenuBtn:visited {
+  color: white; /* Set your desired color */
+  text-decoration: none; /* If you don't want underlines */
+}
+
+.desktopMenuBtn:hover,
+.desktopMenuBtn:active {
+  color: white; /* Set your desired color for hover state */
 }
