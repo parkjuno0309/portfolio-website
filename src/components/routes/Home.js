@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // SVGs as React components
 import userImg from '../../images/user.png';
@@ -12,6 +13,7 @@ import '../../styles/Home.css';
 const roles = ['Coder', 'Engineer', 'Developer'];
 
 const Home = () => {
+  const location = useLocation();
   const [roleIndex, setRoleIndex] = useState(0);
   const [role, setRole] = useState('');
   const [deleting, setDeleting] = useState(false);
@@ -43,7 +45,7 @@ const Home = () => {
     }
   }, [role, deleting, roleIndex]);
   return (
-    <div className="home-container">
+    <div className="home-container" key={location.pathname}>
       <img src={userImg} alt="User" className="bg" />
       <div className="info-container">
         <div className="background-info">
@@ -73,7 +75,7 @@ const Home = () => {
             rel="noreferrer"
             className="icon-link"
           >
-            <GitHubIcon />
+            <GitHubIcon title="Github | Juno Park" />
           </a>
           <a
             href="https://www.linkedin.com/in/junopark0309/"
@@ -81,10 +83,10 @@ const Home = () => {
             rel="noreferrer"
             className="icon-link"
           >
-            <LinkedInIcon />
+            <LinkedInIcon title="LinkedIn | Juno Park" />
           </a>
-          <a href="mailto:youremail@example.com" className="icon-link">
-            <GmailIcon />
+          <a href="mailto:parkjuno0309@gmail.com" className="icon-link">
+            <GmailIcon title="Email | Juno Park" />
           </a>
         </div>
       </div>
