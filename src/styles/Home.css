@@ -1,6 +1,6 @@
 .home-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -11,12 +11,14 @@
 .home-container .info-container {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centralize content */
   justify-content: center;
-  width: 35%;
+  width: 35vw; /* Responsive width */
   position: relative;
-  left: 25%;
-  margin: 2rem;
-  padding: 0.5rem;
+  margin: 2vh 2%; /* Responsive margins */
+  top: -5%;
+  left: 9%;
+  padding: 0.5vw;
   animation: fade-in 850ms, slide-left 850ms;
 }
 
@@ -32,17 +34,17 @@
 }
 
 .home-container .bg {
-  width: 600px;
-  height: 600px;
-  border-radius: 60%;
+  width: 30vw; /* Responsive width based on viewport width */
+  height: 30vw; /* Keep height equal to width to maintain a circle */
+  border-radius: 50%; /* Makes the image circular */
   object-fit: cover;
   position: absolute;
-  left: 30%;
-  top: 50%;
+  left: 30%; /* Centralize horizontally */
+  top: 49.5%; /* Centralize vertically */
   transform: translate(-50%, -50%);
-  border: 5px solid rgb(252, 172, 2);
+  border: 5px solid orange; /* Orange border */
   z-index: 1;
-  animation: fade-in 3.5s, sway-border 3s infinite ease-in-out;
+  animation: fade-in 3.5s;
 }
 
 .home-container .info-container .social-links {
@@ -100,12 +102,22 @@
   animation: unset;
 }
 
+.mobile .home-container .bg {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  height: 50vw;
+  width: 50vw;
+  animation: unset;
+}
+
 .dynamic-text {
   border-right: 3px solid white;
   margin-left: 23px;
-  padding-right: 3px;
+  padding-right: 4px;
   white-space: nowrap;
   overflow: hidden;
+  font-style: italic;
   animation: blink-caret 0.7s step-end infinite;
   color: rgb(252, 172, 2);
 }
@@ -190,17 +202,5 @@
   }
   50% {
     border-color: white;
-  }
-}
-
-@keyframes sway-border {
-  0%,
-  100% {
-    border-width: 6px;
-    border-color: rgb(252, 172, 2);
-  }
-  50% {
-    border-width: 6px;
-    border-color: #ccc;
   }
 }

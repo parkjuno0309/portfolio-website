@@ -46,7 +46,9 @@ const Home = () => {
   }, [role, deleting, roleIndex]);
   return (
     <div className="home-container" key={location.pathname}>
-      <img src={userImg} alt="User" className="bg" />
+      <div className="image-container">
+        <img src={userImg} alt="User" className="bg" />
+      </div>
       <div className="info-container">
         <div className="background-info">
           <h1>
