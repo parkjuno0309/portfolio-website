@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Components
 import Navbar from './components/navbar';
+import Project from './components/Project';
+import ProjectsMenu from './components/ProjectsMenu';
 
 // Route-specific components
 import Home from './components/routes/Home';
@@ -70,7 +72,10 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/experience" element={<Experience />} />
-              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects" element={<Projects />}>
+                <Route path=":projectID" element={<Project />} />
+                <Route index element={<ProjectsMenu />} />
+              </Route>
             </Routes>
           </div>
         </div>

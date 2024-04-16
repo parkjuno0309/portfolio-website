@@ -1,11 +1,15 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-function Projects() {
+// Styles
+import '../../styles/Projects.css';
+
+const Projects = () => {
   return (
-    <div>
-      <h1>Projects Page</h1>
+    <div className="projects-container">
+      <Outlet />
     </div>
   );
-}
+};
 
 export default Projects;
