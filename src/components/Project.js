@@ -1,5 +1,12 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  useParams,
+} from 'react-router-dom';
 
 // Components
 import Message from '../components/Message';
@@ -8,20 +15,18 @@ import Message from '../components/Message';
 import '../styles/Project.css';
 
 // Icons
-import { ReactComponent as GitHubIcon } from '../images/github.svg';
-import { ReactComponent as ExternalLinkIcon } from '../images/external_link.svg';
+import GitHubIcon from '../images/github.svg';
+import ExternalLinkIcon from '../images/external_link.svg';
 
 // Constants
 import PROJECTS from '../projects.js';
 
 const BackButton = () => {
+  const navigate = useNavigate();
   return (
-    <div className="back-button">
-      <Link to="/projects">
-        <div className="arrow">{'\u2190'}</div>
-        Back to Projects
-      </Link>
-    </div>
+    <button className="back-button" onClick={() => navigate('/projects')}>
+      Back to Projects
+    </button>
   );
 };
 

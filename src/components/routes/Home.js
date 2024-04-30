@@ -3,9 +3,9 @@ import { useLocation } from 'react-router-dom';
 
 // SVGs as React components
 import userImg from '../../images/user.png';
-import { ReactComponent as GitHubIcon } from '../../images/github.svg';
-import { ReactComponent as LinkedInIcon } from '../../images/linkedin.svg';
-import { ReactComponent as GmailIcon } from '../../images/gmail.svg';
+import GitHubIcon from '../../images/github.svg';
+import LinkedInIcon from '../../images/linkedin.svg';
+import GmailIcon from '../../images/gmail.svg';
 
 // Styles
 import '../../styles/Home.css';

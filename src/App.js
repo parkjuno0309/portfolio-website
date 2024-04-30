@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // Components
 import Navbar from './components/navbar';
 import Project from './components/Project';
 import ProjectsMenu from './components/ProjectsMenu';
 
-// Route-specific components
+// Routes
 import Home from './components/routes/Home';
-import Experience from './components/routes/Experience';
 import Projects from './components/routes/Projects';
+import Experience from './components/routes/Experience';
 
 // Styles
-import './styles/App.css';
 import './styles/animations.css';
+import './styles/App.css';
 
 // The maximum number of pixels the window must be to be determined as mobile view
 const MOBILE_VIEW_THRESHOLD = 890;
@@ -48,14 +49,14 @@ const App = () => {
         window.location.href = '/#' + hash.slice(hashSlashIndex);
       }
     };
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange();
+    // window.addEventListener('hashchange', handleHashChange);
+    // handleHashChange();
 
     // Cleanup event listeners
     return () => {
       document.removeEventListener('click', handleClick);
       window.removeEventListener('resize', handleWindowResize);
-      window.removeEventListener('hashchange', handleHashChange);
+      // window.removeEventListener('hashchange', handleHashChange);
     };
   }, []); // Only run on mount
 
@@ -63,21 +64,20 @@ const App = () => {
   useEffect(() => {
     setShowMobileView(windowWidth <= MOBILE_VIEW_THRESHOLD);
   }, [windowWidth]);
+
   return (
     <Router>
       <div className={`app-container${showMobileView ? ' mobile' : ''}`}>
-        <div className="App">
-          <Navbar />
-          <div className="page-content">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/projects" element={<Projects />}>
-                <Route path=":projectID" element={<Project />} />
-                <Route index element={<ProjectsMenu />} />
-              </Route>
-            </Routes>
-          </div>
+        <Navbar />
+        <div className="page-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />}>
+              <Route index element={<ProjectsMenu />} />
+              <Route path=":projectID" element={<Project />} />
+            </Route>
+            <Route path="/experience" element={<Experience />} />
+          </Routes>
         </div>
       </div>
     </Router>

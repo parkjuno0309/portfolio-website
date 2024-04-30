@@ -2,6 +2,18 @@ import React from 'react';
 import '../styles/navbar.css';
 import logo from '../images/logo-large.png';
 import { NavLink } from 'react-router-dom';
+import ResumePDF from '../docs/JunhoPark_Resume.pdf';
+
+// Resume Button Component
+const ResumeButton = () => {
+  return (
+    <div className="resume-button">
+      <a href={ResumePDF} target="_blank" rel="noreferrer">
+        Resume
+      </a>
+    </div>
+  );
+};
 
 const Navbar = () => {
   return (
@@ -18,10 +30,7 @@ const Navbar = () => {
           Projects
         </NavLink>
       </div>
-      <button className="desktopMenuBtn">
-        <img src="" alt="" className="desktopMenuImg" />
-        Resume
-      </button>
+      <ResumeButton />
     </nav>
   );
 };
