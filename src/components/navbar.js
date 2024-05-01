@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/navbar.css';
 import logo from '../images/logo-large.png';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import ResumePDF from '../docs/JunhoPark_Resume.pdf';
 
 // Resume Button Component
@@ -18,7 +18,9 @@ const ResumeButton = () => {
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <img src={logo} alt="Logo" className="logo" />
+      <Link to="/">
+        <img src={logo} alt="Logo" className="logo" />
+      </Link>
       <div className="desktopMenu">
         <NavLink to="/" className="desktopMenuListItem">
           Home

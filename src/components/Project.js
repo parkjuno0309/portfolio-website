@@ -4,7 +4,6 @@ import {
   Routes,
   Route,
   Link,
-  useNavigate,
   useParams,
 } from 'react-router-dom';
 
@@ -22,11 +21,13 @@ import ExternalLinkIcon from '../images/external_link.svg';
 import PROJECTS from '../projects.js';
 
 const BackButton = () => {
-  const navigate = useNavigate();
   return (
-    <button className="back-button" onClick={() => navigate('/projects')}>
-      Back to Projects
-    </button>
+    <div className="back-button">
+      <Link to="/projects">
+        <div className="arrow">{'\u2190'}</div>
+        Back to Projects
+      </Link>
+    </div>
   );
 };
 
@@ -67,7 +68,6 @@ const Project = () => {
 
   return (
     <div className="project-container">
-      <BackButton />
       <div className="project-header-row">
         <div className="project-header">
           <h1 className="project-title">{title}</h1>
@@ -107,6 +107,7 @@ const Project = () => {
           </li>
         ))}
       </ul>
+      <BackButton />
 
       <div className="project-content">
         {Array(Math.max(blurbs.length, images.length))
