@@ -22,13 +22,26 @@ const Navbar = () => {
         <img src={logo} alt="Logo" className="logo" />
       </Link>
       <div className="desktopMenu">
-        <NavLink to="/" className="desktopMenuListItem">
+        <NavLink
+          to="/"
+          exact
+          className="desktopMenuListItem"
+          activeClassName="active"
+        >
           Home
         </NavLink>
-        <NavLink to="/experience" className="desktopMenuListItem">
+        <NavLink
+          to="/experience"
+          className="desktopMenuListItem"
+          activeClassName="active"
+        >
           Experience
         </NavLink>
-        <NavLink to="/projects" className="desktopMenuListItem">
+        <NavLink
+          to="/projects"
+          className="desktopMenuListItem"
+          activeClassName="active"
+        >
           Projects
         </NavLink>
       </div>
