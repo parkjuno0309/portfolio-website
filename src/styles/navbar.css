@@ -31,12 +31,8 @@
   cursor: pointer;
   font-size: 1.25rem;
   font-family: 'source-code-pro', sans-serif;
-}
-
-.desktopMenuListItem:hover {
-  color: rgb(252, 172, 2);
-  padding-bottom: 0.23rem;
-  border-bottom: 3px solid rgb(252, 172, 2);
+  position: relative; /* Required for absolute positioning of pseudo-elements */
+  overflow: visible; /* Ensures the pseudo-element does not extend outside the link */
 }
 
 .desktopMenuBtn {
@@ -111,10 +107,48 @@
   /* border-color: var(--secondary-color); */
 }
 
+/* Ensure that the active state overrides the hover state */
+.navbar .desktopMenuListItem.active:hover {
+  color: rgb(252, 172, 2);
+}
+
+.desktopMenuListItem::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(252, 172, 2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease-in-out;
+}
+
+/* Hover and active states for the menu items */
+.desktopMenuListItem:hover::after,
+.desktopMenuListItem.active::after {
+  transform: scaleX(1); /* Scale the pseudo-element to full width */
+}
+
+/* Keyframes for the animation effect (optional, if you prefer animation over transition) */
+@keyframes drawLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Applying animation on hover */
+.desktopMenuListItem:hover::after {
+  animation: drawLine 0.35s ease forwards; /* Only if you prefer a discrete keyframe animation */
+}
+
+/* Apply active styling */
 .navbar .desktopMenuListItem.active {
   color: rgb(252, 172, 2); /* This sets the active link color to yellow */
-  padding-bottom: 0.23rem;
-  border-bottom: 3px solid rgb(252, 172, 2); /* Underline effect for active item */
 }
 
 /* Ensure that the active state overrides the hover state */
