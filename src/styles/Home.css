@@ -36,6 +36,8 @@
 .home-container .bg {
   width: 30vw; /* Responsive width based on viewport width */
   height: 30vw; /* Keep height equal to width to maintain a circle */
+  max-width: 750px; /* Maximum width limit */
+  max-height: 750px; /* Maximum height limit */
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover;
   position: absolute;
