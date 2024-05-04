@@ -13,7 +13,7 @@
 /* Back Button Styling */
 .project-container .back-button {
   position: absolute;
-  top: 1.65rem; /* Adjust according to your design needs */
+  top: 2rem; /* Adjust according to your design needs */
   right: 4rem; /* Match the padding of the container */
 }
 
@@ -48,6 +48,7 @@
 /* Project Information Styling */
 .project-container .project-header-row {
   display: flex;
+  margin-top: 12px;
 }
 
 .project-header {
@@ -63,15 +64,17 @@
 .project-container .project-title {
   margin: 0;
   margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 .project-container .project-year {
   margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 .project-container .project-links {
   list-style-type: none;
-  margin: 0;
+  margin-top: 1.5rem;
   padding: 0;
 }
 
@@ -238,4 +241,25 @@
 
 .mobile .project-container div.project-image {
   height: calc((100vw - 4rem) * 0.5625);
+}
+
+/* Back Button Styling */
+.mobile .project-container .back-button {
+  position: absolute;
+  top: 2rem; /* Adjust according to your design needs */
+  right: 2rem; /* Match the padding of the container */
+}
+
+.mobile .project-container .project-year {
+  margin-right: 9.1rem;
+}
+
+.mobile .project-container .project-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style-type: none;
+  margin-top: 1.5rem;
+  padding: 0;
+  width: 100%;
 }

@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: relative;
   top: 0;
   z-index: 10;
   background: #242121;
@@ -21,11 +21,11 @@
   margin-right: auto;
 }
 
-.desktopMenu {
+.menu {
   display: flex;
-  align-items: center; /* Center items vertically */
-  margin-left: auto; /* Pushes the menu to the right */
-  margin-right: 1rem; /* Space between menu and Resume button */
+  align-items: center;
+  margin-left: auto;
+  margin-right: 1rem;
 }
 
 .desktopMenuListItem {
@@ -156,4 +156,82 @@
 /* Ensure that the active state overrides the hover state */
 .navbar .desktopMenuListItem.active:hover {
   color: rgb(252, 172, 2);
+}
+
+.hamburger {
+  display: none; /* Initially hidden */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  margin-right: 1rem; /* Adjust as necessary for spacing */
+}
+
+.hamburger span {
+  height: 3px;
+  background-color: #ffffff;
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(-315deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  width: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(315deg);
+}
+
+@media (max-width: 768px) {
+  .desktopMenu {
+    display: none; /* Hide desktop menu in mobile view */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger in mobile view */
+  }
+
+  .menu {
+    position: fixed;
+    top: 7rem; /* Increased from 7rem to lower the menu below the navbar */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: auto;
+    background-color: #242121;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center; /* Center menu items vertically */
+    align-items: center;
+    display: none; /* Initially hidden */
+    overflow-y: auto; /* Allows scrolling if many items */
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 2s ease;
+  }
+
+  .menu .desktopMenuListItem {
+    /* Apply the vertical adjustment to both menu items and the resume button */
+    transform: translateY(-5rem);
+  }
+
+  .menu .resume-button {
+    transform: translateY(-4.1rem);
+  }
+
+  .menu.open {
+    display: flex; /* Display when open */
+    transform: scaleY(1);
+    z-index: 9; /* Ensure it's below the navbar */
+  }
+
+  .navbar {
+    z-index: 10; /* Make sure navbar is always on top */
+  }
 }

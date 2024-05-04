@@ -257,7 +257,7 @@ const PROJECTS = [
   },
   {
     id: 'bustub',
-    title: 'Bustub',
+    title: 'Bustub DBMS',
     year: '2024',
     github: '',
     link: '',

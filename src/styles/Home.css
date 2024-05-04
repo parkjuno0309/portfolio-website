@@ -38,6 +38,8 @@
   height: 30vw; /* Keep height equal to width to maintain a circle */
   max-width: 750px; /* Maximum width limit */
   max-height: 750px; /* Maximum height limit */
+  min-width: 270px;
+  min-height: 270px;
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover;
   position: absolute;
@@ -96,8 +98,11 @@
 
 .mobile .home-container .info-container {
   text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
   width: auto;
-  position: unset;
+  top: -8.5%;
+  left: 0%;
   background: unset;
   box-shadow: unset;
   border-radius: unset;
@@ -105,17 +110,31 @@
 }
 
 .mobile .home-container .bg {
-  position: absolute;
-  top: 28%;
+  position: relative;
+  top: 50%;
   left: 50%;
   height: 50vw;
   width: 50vw;
   animation: unset;
 }
 
+.mobile .home-container .info-container .social-links {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  width: 100%; /* Full width */
+  position: fixed; /* Fixed position to stay at the bottom */
+  bottom: 25px; /* Positioned slightly above the bottom */
+  left: 0;
+  right: 0;
+  z-index: 5; /* Ensuring it's visible above other elements */
+  background: #242121; /* Semi-transparent background */
+  padding: 10px 0; /* Padding for better touch area */
+}
+
 .dynamic-text {
   border-right: 3px solid white;
-  margin-left: 20px;
+  margin-left: 10px;
   padding-right: 4px;
   white-space: nowrap;
   overflow: hidden;
@@ -204,5 +223,15 @@
   }
   50% {
     border-color: white;
+  }
+}
+
+.br-mobile {
+  display: none; /* Hide by default */
+}
+
+@media (max-width: 768px) {
+  .br-mobile {
+    display: block; /* Show on mobile devices */
   }
 }

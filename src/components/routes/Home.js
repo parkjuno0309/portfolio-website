@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
-// SVGs as React components
 import userImg from '../../images/user.png';
 import GitHubIcon from '../../images/github.svg';
 import LinkedInIcon from '../../images/linkedin.svg';
 import GmailIcon from '../../images/gmail.svg';
-
-// Styles
 import '../../styles/Home.css';
 
 const roles = ['Coder', 'Engineer', 'Developer'];
@@ -17,6 +13,19 @@ const Home = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [role, setRole] = useState('');
   const [deleting, setDeleting] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const typingDelay = 150;
@@ -37,13 +46,14 @@ const Home = () => {
       if (role.length > 0) {
         setTimeout(() => {
           setRole(roles[roleIndex].substring(0, role.length - 1));
-        });
+        }, erasingDelay);
       } else {
         setDeleting(false);
         setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
       }
     }
   }, [role, deleting, roleIndex]);
+
   return (
     <div className="home-container" key={location.pathname}>
       <div className="image-container">
@@ -52,7 +62,8 @@ const Home = () => {
       <div className="info-container">
         <div className="background-info">
           <h1>
-            Hi, I'm Juno <span className="dynamic-text">{role}</span>
+            Hi, I'm Juno{isMobile && <span className="br-mobile"></span>}
+            <span className="dynamic-text">{role}</span>
           </h1>
           <br />
           <p>
