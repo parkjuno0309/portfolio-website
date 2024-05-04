@@ -23,14 +23,6 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -58,10 +50,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      favicon: './public/favicon.ico',
     }),
   ],
   devServer: {
-    historyApiFallback: false,
+    historyApiFallback: true,
   },
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 };
