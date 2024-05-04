@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Link, Routes, Route, HashRouter } from 'react-router-dom';
 
 // Components
 import Navbar from './components/navbar';
@@ -34,29 +33,10 @@ const App = () => {
     const handleWindowResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleWindowResize);
 
-    // Hash change event listener
-    const handleHashChange = () => {
-      const { hash, pathname } = window.location;
-
-      // If the URL is not the root, redirect to the root
-      if (pathname !== '/') {
-        window.location.href = '/#' + pathname;
-      }
-
-      // Fix URL if slash exists in hash and is not the first character
-      const hashSlashIndex = hash.indexOf('/');
-      if (hashSlashIndex > -1 && hashSlashIndex !== 1) {
-        window.location.href = '/#' + hash.slice(hashSlashIndex);
-      }
-    };
-    // window.addEventListener('hashchange', handleHashChange);
-    // handleHashChange();
-
     // Cleanup event listeners
     return () => {
       document.removeEventListener('click', handleClick);
       window.removeEventListener('resize', handleWindowResize);
-      // window.removeEventListener('hashchange', handleHashChange);
     };
   }, []); // Only run on mount
 
@@ -66,7 +46,7 @@ const App = () => {
   }, [windowWidth]);
 
   return (
-    <Router>
+    <HashRouter>
       <div className={`app-container${showMobileView ? ' mobile' : ''}`}>
         <Navbar />
         <div className="page-content">
@@ -80,7 +60,7 @@ const App = () => {
           </Routes>
         </div>
       </div>
-    </Router>
+    </HashRouter>
   );
 };
 

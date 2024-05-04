@@ -12,14 +12,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ethanratnofsky/Portfolio-Website.git"
+        "url": "git+https://github.com/parkjuno0309/portfolio-website"
     },
-    "author": "Ethan Ratnofsky",
+    "author": "Junho Park",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/ethanratnofsky/Portfolio-Website/issues"
+        "url": "https://github.com/parkjuno0309/portfolio-website/issues"
     },
-    "homepage": "https://www.ethanratnofsky.com",
+    "homepage": "https://www.junopark.com",
     "devDependencies": {
         "@babel/core": "^7.18.10",
         "@babel/preset-env": "^7.18.10",
