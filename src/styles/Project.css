@@ -1,265 +1,265 @@
 .project-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  min-height: 100%;
-  width: 100%;
-  animation: slide-left 500ms forwards;
-  box-sizing: border-box;
-  padding: 3rem 4rem 1rem 4rem; /* Reduced bottom padding */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    width: 100%;
+    animation: slide-left 500ms forwards;
+    box-sizing: border-box;
+    padding: 3rem 4rem 1rem 4rem; /* Reduced bottom padding */
 }
 
 /* Back Button Styling */
 .project-container .back-button {
-  position: absolute;
-  top: 2rem; /* Adjust according to your design needs */
-  right: 4rem; /* Match the padding of the container */
+    position: absolute;
+    top: 4rem; /* Adjust according to your design needs */
+    right: 7rem; /* Match the padding of the container */
 }
 
 .project-container .back-button .arrow {
-  display: inline-block;
-  font-size: 1.25rem;
-  margin-right: 0.75rem;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
 }
 
 .project-container .back-button > a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
 .project-container .back-button > a:hover,
 .project-container .back-button > a:focus {
-  color: var(--tertiary-color);
-  outline: none;
+    color: var(--tertiary-color);
+    outline: none;
 }
 
 .project-container .back-button > a:hover .arrow,
 .project-container .back-button > a:focus .arrow {
-  animation: bounce-left 500ms;
-  animation-timing-function: cubic-bezier(0, -1, 1, 2);
+    animation: bounce-left 500ms;
+    animation-timing-function: cubic-bezier(0, -1, 1, 2);
 }
 
 /* Project Information Styling */
 .project-container .project-header-row {
-  display: flex;
-  margin-top: 12px;
+    display: flex;
+    margin-top: 12px;
 }
 
 .project-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .project-container .project-header > * {
-  display: inline-block;
+    display: inline-block;
 }
 
 .project-container .project-title {
-  margin: 0;
-  margin-right: 1rem;
-  margin-top: 1rem;
+    margin: 0;
+    margin-right: 1rem;
+    margin-top: 1rem;
 }
 
 .project-container .project-year {
-  margin-right: 1rem;
-  margin-top: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
 }
 
 .project-container .project-links {
-  list-style-type: none;
-  margin-top: 1.5rem;
-  padding: 0;
+    list-style-type: none;
+    margin-top: 1.5rem;
+    padding: 0;
 }
 
 .project-container .project-links > li {
-  display: inline-block;
+    display: inline-block;
 }
 
 .project-container .project-links svg {
-  width: 1.5rem;
-  margin: 0.5rem;
+    width: 1.5rem;
+    margin: 0.5rem;
 }
 
 .project-container .project-skills {
-  list-style-type: none;
-  margin: 15px 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 15px 0;
+    padding: 0;
 }
 
 .project-container .project-skills .project-skill {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  font-size: 0.9rem;
-  display: inline-block;
-  padding: 8px 10px;
-  margin: 2px 5px;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 0.75rem;
-  color: var(--tertiary-color);
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+    font-size: 0.9rem;
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 2px 5px;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 0.75rem;
+    color: var(--tertiary-color);
 }
 
 .project-container .project-blurb {
-  margin: 15px 40px;
+    margin: 15px 40px;
 }
 
 .project-container .project-blurb a {
-  color: inherit;
+    color: inherit;
 }
 
 .project-container .project-content-row {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  margin-block: 1rem;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-block: 1rem;
+    justify-content: center;
 }
 
 .project-container .project-content-row:nth-child(even) {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .project-container .project-content-row > .website-image-container,
 .project-container
-  .project-content-row
-  > .website-image-container
-  > .project-image,
+    .project-content-row
+    > .website-image-container
+    > .project-image,
 .project-container .project-content-row > .project-demo {
-  flex: 1.25;
+    flex: 1.25;
 }
 
 .project-container .project-content-row > div {
-  flex: 1;
-  margin: 10px 30px;
+    flex: 1;
+    margin: 10px 30px;
 }
 
 /* Project Image Styling */
 .project-container > .project-image,
 .project-container .website-image-container {
-  align-self: center;
-  width: 75%;
-  box-shadow: 0 0 0.25rem black;
+    align-self: center;
+    width: 75%;
+    box-shadow: 0 0 0.25rem black;
 }
 
 .project-container .website-image-container {
-  align-self: center;
-  width: 75%;
-  background: #454444;
-  border-radius: 8px;
-  box-shadow: 0 0 10px black;
-  overflow: hidden;
-  margin-block: 10px;
+    align-self: center;
+    width: 75%;
+    background: #454444;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+    margin-block: 10px;
 }
 
 .project-container .website-image-container .dots {
-  display: inline-flex;
-  justify-content: space-between;
-  width: 48px;
-  position: relative;
-  left: 12px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 48px;
+    position: relative;
+    left: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .project-container .website-image-container .dots .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #676666;
-  border-radius: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #676666;
+    border-radius: 10px;
 }
 
 .project-container .website-image-container .project-image {
-  width: 100%;
+    width: 100%;
 }
 
 .project-container div.project-image {
-  background: lightgray;
-  height: calc((75vw - 4rem) * 0.5625);
+    background: lightgray;
+    height: calc((75vw - 4rem) * 0.5625);
 }
 
 .project-content-row > .project-image {
-  margin-inline: 3rem;
-  height: 35rem;
-  width: auto;
-  display: flex;
-  justify-self: center;
-  box-shadow: 0 0 10px black;
+    margin-inline: 3rem;
+    height: 35rem;
+    width: auto;
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 0 10px black;
 }
 
 /* Project Demo Styling */
 .project-demo {
-  display: flex;
-  justify-content: center;
-  margin-block: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-block: 1rem;
 }
 
 .project-demo > iframe {
-  width: 80%;
-  aspect-ratio: 16 / 9;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 0 0.25rem black;
+    width: 80%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0.25rem black;
 }
 
 /* Mobile View Styling */
 .mobile .project-container {
-  padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 .mobile .project-container .project-header {
-  margin-top: 0.75rem;
-  flex-direction: column;
+    margin-top: 0.75rem;
+    flex-direction: column;
 }
 
 .mobile .project-container .project-content-row {
-  flex-direction: column;
-  font-size: 20px;
-  margin-block: 0.5rem;
+    flex-direction: column;
+    font-size: 20px;
+    margin-block: 0.5rem;
 }
 
 .mobile .project-container .project-blurb {
-  margin: 10px 5px;
+    margin: 10px 5px;
 }
 
 .mobile .project-container .project-details h4 {
-  margin: 1rem auto;
+    margin: 1rem auto;
 }
 
 .mobile .project-container .project-image,
 .mobile .project-container .website-image-container,
 .mobile .project-container .project-demo > iframe {
-  width: 105%;
-  height: auto;
+    width: 105%;
+    height: auto;
 }
 
 .mobile .project-container div.project-image {
-  height: calc((100vw - 4rem) * 0.5625);
+    height: calc((100vw - 4rem) * 0.5625);
 }
 
 /* Back Button Styling */
 .mobile .project-container .back-button {
-  position: absolute;
-  top: 2rem; /* Adjust according to your design needs */
-  right: 2rem; /* Match the padding of the container */
+    position: absolute;
+    top: 8.5rem; /* Adjust according to your design needs */
+    right: 5rem; /* Match the padding of the container */
 }
 
 .mobile .project-container .project-year {
-  margin-right: 9.1rem;
+    margin-right: 9.1rem;
 }
 
 .mobile .project-container .project-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  list-style-type: none;
-  margin-top: 1.5rem;
-  padding: 0;
-  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin-top: 1.5rem;
+    padding: 0;
+    width: 100%;
 }

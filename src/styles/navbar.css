@@ -1,203 +1,207 @@
 .navbar {
-  height: 7rem;
-  width: 100vw;
-  max-width: 132rem;
-  margin: 0 auto;
-  padding: 2rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  top: 0;
-  z-index: 10;
-  background: #242121;
-  box-shadow: 0 2px 5px #242121;
+    height: 4.5rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    background: #242121;
+    box-shadow: 0 2px 5px #242121;
 }
 
 .logo {
-  object-fit: cover;
-  size: 100px;
-  width: 15rem;
-  margin-right: auto;
+    object-fit: cover;
+    size: 100px;
+    width: 15rem;
+    margin-right: auto;
+    margin-left: 2rem;
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1rem;
 }
 
 .desktopMenuListItem {
-  margin: 1.3rem;
-  cursor: pointer;
-  font-size: 1.25rem;
-  font-family: 'source-code-pro', sans-serif;
-  position: relative; /* Required for absolute positioning of pseudo-elements */
-  overflow: visible; /* Ensures the pseudo-element does not extend outside the link */
+    margin: 1.3rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-family: "source-code-pro", sans-serif;
+    position: relative; /* Required for absolute positioning of pseudo-elements */
+    overflow: visible; /* Ensures the pseudo-element does not extend outside the link */
 }
 
 .desktopMenuBtn {
-  background: transparent;
-  color: rgb(252, 172, 2);
-  border: 2px solid rgb(252, 172, 2);
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
+    background: transparent;
+    color: rgb(252, 172, 2);
+    border: 2px solid rgb(252, 172, 2);
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
 }
 
 .desktopMenuBtn:hover {
-  background: rgb(252, 172, 2);
-  color: white;
-  box-shadow: 0 8px 12px 0 rgba(231, 231, 231, 0.2);
+    background: rgb(252, 172, 2);
+    color: white;
+    box-shadow: 0 8px 12px 0 rgba(231, 231, 231, 0.2);
 }
 
 /* Override link and visited states for your navbar items */
 .navbar .desktopMenuListItem:link,
 .navbar .desktopMenuListItem:visited {
-  color: white; /* Set your desired color for the links */
-  text-decoration: none; /* If you don't want underlines */
+    color: white; /* Set your desired color for the links */
+    text-decoration: none; /* If you don't want underlines */
 }
 
 /* You might also want to set hover and active states */
 .navbar .desktopMenuListItem:hover,
 .navbar .desktopMenuListItem:active {
-  color: white; /* Set your desired color for hover state */
+    color: white; /* Set your desired color for hover state */
 }
 
 /* Apply the same styles for your resume button if it's a link */
 .desktopMenuBtn:link,
 .desktopMenuBtn:visited {
-  color: white; /* Set your desired color */
-  text-decoration: none; /* If you don't want underlines */
+    color: white; /* Set your desired color */
+    text-decoration: none; /* If you don't want underlines */
 }
 
 .desktopMenuBtn:hover,
 .desktopMenuBtn:active {
-  color: white; /* Set your desired color for hover state */
+    color: white; /* Set your desired color for hover state */
 }
 
 /* Resume Button */
 .resume-button > a {
-  background: transparent;
-  color: rgb(252, 172, 2);
-  border: 2px solid rgb(252, 172, 2);
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1.3rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
+    background: transparent;
+    color: rgb(252, 172, 2);
+    border: 2px solid rgb(252, 172, 2);
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    margin-right: 5rem;
 }
 
 .resume-button:hover > a,
 .resume-button:focus-within > a {
-  outline: none;
-  color: var(--secondary-color);
-  background-color: var(--tertiary-color);
-  /* border-color: var(--secondary-color); */
+    outline: none;
+    color: var(--secondary-color);
+    background-color: var(--tertiary-color);
+    /* border-color: var(--secondary-color); */
 }
 
 /* Ensure that the active state overrides the hover state */
 .navbar .desktopMenuListItem.active:hover {
-  color: rgb(252, 172, 2);
+    color: rgb(252, 172, 2);
 }
 
 .desktopMenuListItem::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: rgb(252, 172, 2);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.35s ease-in-out;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(252, 172, 2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease-in-out;
 }
 
 /* Hover and active states for the menu items */
 .desktopMenuListItem:hover::after,
 .desktopMenuListItem.active::after {
-  transform: scaleX(1); /* Scale the pseudo-element to full width */
+    transform: scaleX(1); /* Scale the pseudo-element to full width */
 }
 
 /* Keyframes for the animation effect (optional, if you prefer animation over transition) */
 @keyframes drawLine {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
 }
 
 /* Applying animation on hover */
 .desktopMenuListItem:hover::after {
-  animation: drawLine 0.35s ease forwards; /* Only if you prefer a discrete keyframe animation */
+    animation: drawLine 0.35s ease forwards; /* Only if you prefer a discrete keyframe animation */
 }
 
 /* Apply active styling */
 .navbar .desktopMenuListItem.active {
-  color: rgb(252, 172, 2); /* This sets the active link color to yellow */
+    color: rgb(252, 172, 2); /* This sets the active link color to yellow */
 }
 
 /* Ensure that the active state overrides the hover state */
 .navbar .desktopMenuListItem.active:hover {
-  color: rgb(252, 172, 2);
+    color: rgb(252, 172, 2);
 }
 
 .hamburger {
-  display: none; /* Initially hidden */
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 20px;
-  width: 30px;
-  margin-right: 1rem; /* Adjust as necessary for spacing */
+    display: none; /* Initially hidden */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    margin-right: 1rem; /* Adjust as necessary for spacing */
 }
 
 .hamburger span {
-  height: 3px;
-  background-color: #ffffff;
-  width: 100%;
-  display: block;
-  transition: transform 0.5s ease, background-color 0.5s ease;
+    height: 3px;
+    background-color: #ffffff;
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(-315deg);
+    transform: translateY(7px) rotate(-315deg);
 }
 
 .hamburger.active span:nth-child(2) {
-  width: 0;
+    width: 0;
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
 }
 
-@media (max-width: 768px) {
-  .desktopMenu {
+.mobile .navbar {
+    padding-bottom: 1rem;
+}
+.mobile .desktopMenu {
     display: none; /* Hide desktop menu in mobile view */
-  }
+}
 
-  .hamburger {
+.mobile .hamburger {
     display: flex; /* Show hamburger in mobile view */
-  }
+    margin-right: 5rem;
+}
 
-  .menu {
+.mobile .menu {
     position: fixed;
     top: 7rem; /* Increased from 7rem to lower the menu below the navbar */
     left: 0;
@@ -214,24 +218,23 @@
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 2s ease;
-  }
+}
 
-  .menu .desktopMenuListItem {
+.mobile .menu .desktopMenuListItem {
     /* Apply the vertical adjustment to both menu items and the resume button */
     transform: translateY(-5rem);
-  }
+}
 
-  .menu .resume-button {
-    transform: translateY(-4.1rem);
-  }
+.mobile .menu .resume-button {
+    transform: translateX(2.5rem) translateY(-4rem);
+}
 
-  .menu.open {
+.mobile .menu.open {
     display: flex; /* Display when open */
     transform: scaleY(1);
     z-index: 9; /* Ensure it's below the navbar */
-  }
+}
 
-  .navbar {
+.mobile .navbar {
     z-index: 10; /* Make sure navbar is always on top */
-  }
 }

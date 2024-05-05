@@ -357,7 +357,7 @@ const PROJECTS = [
     },
     {
         id: "ncaa-analysis",
-        title: "NCAA Basketball Analysis",
+        title: "NCAA Analysis",
         year: "2023",
         github: "https://github.com/parkjuno0309/ncaa-analysis",
         link: "https://github.com/parkjuno0309/ncaa-analysis",

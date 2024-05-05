@@ -1,237 +1,238 @@
 .home-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .home-container .info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centralize content */
-  justify-content: center;
-  width: 35vw; /* Responsive width */
-  position: relative;
-  margin: 2vh 2%; /* Responsive margins */
-  top: -5%;
-  left: 9%;
-  padding: 0.5vw;
-  animation: fade-in 850ms, slide-left 850ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralize content */
+    justify-content: center;
+    width: 35vw; /* Responsive width */
+    position: relative;
+    margin: 2vh 2%; /* Responsive margins */
+    top: -5%;
+    left: 9%;
+    padding: 0.5vw;
+    animation: fade-in 850ms, slide-left 850ms;
 }
 
 .home-container .info-container .background-info {
-  background: var(--primary-color);
-  box-shadow: 0 0 1rem 2rem var(--primary-color);
-  border-radius: 0.5rem;
+    background: var(--primary-color);
+    box-shadow: 0 0 1rem 2rem var(--primary-color);
+    border-radius: 0.5rem;
 }
 
 .home-container .info-container .background-info > h1,
 .home-container .info-container .background-info > p {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .home-container .bg {
-  width: 30vw; /* Responsive width based on viewport width */
-  height: 30vw; /* Keep height equal to width to maintain a circle */
-  max-width: 750px; /* Maximum width limit */
-  max-height: 750px; /* Maximum height limit */
-  min-width: 270px;
-  min-height: 270px;
-  border-radius: 50%; /* Makes the image circular */
-  object-fit: cover;
-  position: absolute;
-  left: 30%; /* Centralize horizontally */
-  top: 49.5%; /* Centralize vertically */
-  transform: translate(-50%, -50%);
-  border: 5px solid orange; /* Orange border */
-  z-index: 1;
-  animation: fade-in 3.5s;
+    width: 30vw; /* Responsive width based on viewport width */
+    height: 30vw; /* Keep height equal to width to maintain a circle */
+    max-width: 750px; /* Maximum width limit */
+    max-height: 750px; /* Maximum height limit */
+    min-width: 270px;
+    min-height: 270px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    position: absolute;
+    left: 30%; /* Centralize horizontally */
+    top: 49.5%; /* Centralize vertically */
+    transform: translate(-50%, -50%);
+    border: 5px solid orange; /* Orange border */
+    z-index: 1;
+    animation: fade-in 3.5s;
 }
 
 .home-container .info-container .social-links {
-  display: flex;
-  justify-content: space-around; /* This will space out the icons more evenly */
-  align-items: center;
-  bottom: -60px;
-  position: absolute;
-  left: 0;
-  right: 0;
+    display: flex;
+    justify-content: space-around; /* This will space out the icons more evenly */
+    align-items: center;
+    bottom: -60px;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 .icon-link {
-  transition: transform 0.2s ease;
-  margin: 0 1rem;
+    transition: transform 0.2s ease;
+    margin: 0 1rem;
 }
 
 /* The SVG inside the social link */
 .icon-link svg {
-  width: 30px; /* Larger size */
-  height: 30px;
-  fill: white;
+    width: 30px; /* Larger size */
+    height: 30px;
+    fill: white;
 }
 
 /* Initial color of the icon link (text color) */
 .icon-link {
-  color: white; /* White color */
+    color: white; /* White color */
 }
 
 .icon-link:focus {
-  outline: none;
+    outline: none;
 }
 
 .icon-link > svg {
-  fill: white;
+    fill: white;
 }
 
 /* Hover effect for the social link icons */
 .icon-link:hover > svg,
 .icon-link:focus > svg {
-  fill: var(--tertiary-color);
+    fill: var(--tertiary-color);
 }
 
 .mobile .home-container {
-  flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    overflow: visible;
 }
 
 .mobile .home-container .info-container {
-  text-align: center;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: auto;
-  top: -8.5%;
-  left: 0%;
-  background: unset;
-  box-shadow: unset;
-  border-radius: unset;
-  animation: unset;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: auto;
+    top: 15%;
+    left: 0%;
+    background: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    animation: unset;
+    overflow: visible;
 }
 
 .mobile .home-container .bg {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  height: 50vw;
-  width: 50vw;
-  animation: unset;
+    position: relative;
+    top: 74%;
+    left: 50%;
+    height: 50vw;
+    width: 50vw;
+    animation: unset;
+    overflow: visible;
 }
 
 .mobile .home-container .info-container .social-links {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;
-  width: 100%; /* Full width */
-  position: fixed; /* Fixed position to stay at the bottom */
-  bottom: 25px; /* Positioned slightly above the bottom */
-  left: 0;
-  right: 0;
-  z-index: 5; /* Ensuring it's visible above other elements */
-  background: #242121; /* Semi-transparent background */
-  padding: 10px 0; /* Padding for better touch area */
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed position to stay at the bottom */
+    bottom: 0.1px; /* Positioned slightly above the bottom */
+    left: 0;
+    right: 0;
+    z-index: 5; /* Ensuring it's visible above other elements */
+    background: #242121; /* Semi-transparent background */
+    padding: 10px 0px 20px 0px; /* Padding for better touch area */
+    overflow: hidden;
 }
 
 .dynamic-text {
-  border-right: 3px solid white;
-  margin-left: 10px;
-  padding-right: 4px;
-  white-space: nowrap;
-  overflow: hidden;
-  font-style: italic;
-  animation: blink-caret 0.7s step-end infinite;
-  color: rgb(252, 172, 2);
+    border-right: 3px solid white;
+    margin-left: 10px;
+    padding-right: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-style: italic;
+    animation: blink-caret 0.7s step-end infinite;
+    color: rgb(252, 172, 2);
+    overflow: hidden;
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-    visibility: hidden;
-    display: none;
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-    display: revert;
-  }
+    from {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        display: revert;
+    }
 }
 
 @keyframes fade-out {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-    display: none;
-  }
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
 }
 
 @keyframes slide-down {
-  from {
-    transform: translateY(-100%);
-  }
+    from {
+        transform: translateY(-100%);
+    }
 }
 
 @keyframes slide-up {
-  from {
-    transform: translateY(100%);
-  }
+    from {
+        transform: translateY(100%);
+    }
 }
 
 @keyframes slide-left {
-  from {
-    transform: translateX(100%);
-  }
+    from {
+        transform: translateX(100%);
+    }
 }
 
 @keyframes slide-right {
-  from {
-    transform: translateX(-100%);
-  }
+    from {
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes bounce-left {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes bounce-out {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1.2);
-  }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 @keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
 }
 
 .br-mobile {
-  display: none; /* Hide by default */
+    display: none; /* Hide by default */
 }
 
-@media (max-width: 768px) {
-  .br-mobile {
+.mobile .br-mobile {
     display: block; /* Show on mobile devices */
-  }
 }

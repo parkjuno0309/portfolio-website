@@ -22,7 +22,7 @@
 .experience-container .experience-list .experience-item .timeline-spot {
     position: relative;
     top: -20px;
-    left: -17px;
+    left: -16px;
     height: 18px;
     width: 18px;
     aspect-ratio: 1;
@@ -142,4 +142,9 @@
 .experience-item-bullets {
     padding-left: 1rem;
     margin-top: 1rem;
+}
+
+/* Mobile View Styling */
+.mobile .experience-item-logo {
+    display: none;
 }
