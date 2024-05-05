@@ -1,15 +1,15 @@
 import React from 'react'; // for JSX
 
 // Images
-import PortfolioWebsiteImage from './images/portfolio_website.png';
-import NBASimulatorImage from './images/nba-simulator.png';
-import ScoreStoryImage from './images/score-story.png';
-import SpicyMemesImage from './images/spicy_memes.png';
-import BustubImage from './images/bustub.png';
-import NetMetricsImage from './images/networking.png';
-import NcaaAnalysisImage1 from './images/ncaa-analysis1.png';
-import NcaaAnalysisImage2 from './images/ncaa-analysis2.png';
-import NcaaAnalysisImage3 from './images/ncaa-analysis3.png';
+import PortfolioWebsiteImage from '../public/images/portfolio_website.png';
+import NBASimulatorImage from '../public/images/nba-simulator.png';
+import ScoreStoryImage from '../public/images/score-story.png';
+import SpicyMemesImage from '../public/images/spicy_memes.png';
+import BustubImage from '../public/images/bustub.png';
+import NetMetricsImage from '../public/images/networking.png';
+import NcaaAnalysisImage1 from '../public/images/ncaa-analysis1.png';
+import NcaaAnalysisImage2 from '../public/images/ncaa-analysis2.png';
+import NcaaAnalysisImage3 from '../public/images/ncaa-analysis3.png';
 
 /* Template for Project Object
 {

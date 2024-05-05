@@ -1,7 +1,7 @@
 // Images
-import KinetikLogo from './images/kinetik_logo.png';
-import SparkLabsLogo from './images/sparklabs_logo.png';
-import ClarinsLogo from './images/clarins_logo.png';
+import KinetikLogo from '../public/images/kinetik_logo.png';
+import SparkLabsLogo from '../public/images/sparklabs_logo.png';
+import ClarinsLogo from '../public/images/clarins_logo.png';
 
 const EXPERIENCES = [
   {

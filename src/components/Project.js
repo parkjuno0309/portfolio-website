@@ -14,8 +14,8 @@ import Message from '../components/Message';
 import '../styles/Project.css';
 
 // Icons
-import GitHubIcon from '../images/github.svg';
-import ExternalLinkIcon from '../images/external_link.svg';
+import GitHubIcon from '../../public/images/github.svg';
+import ExternalLinkIcon from '../../public/images/external_link.svg';
 
 // Constants
 import PROJECTS from '../projects.js';

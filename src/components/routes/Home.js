@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import userImg from '../../images/user.png';
-import GitHubIcon from '../../images/github.svg';
-import LinkedInIcon from '../../images/linkedin.svg';
-import GmailIcon from '../../images/gmail.svg';
+import userImg from '../../../public/images/user.png';
+import GitHubIcon from '../../../public/images/github.svg';
+import LinkedInIcon from '../../../public/images/linkedin.svg';
+import GmailIcon from '../../../public/images/gmail.svg';
 import '../../styles/Home.css';
 
 const roles = ['Coder', 'Engineer', 'Developer'];

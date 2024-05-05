@@ -1,7 +1,7 @@
 import React from 'react';
 
 // SVG
-import LogoSignature from '../images/logo_signature.svg';
+import LogoSignature from '../../public/images/logo_signature.svg';
 
 // Styles
 import '../styles/LoadingOverlay.css';

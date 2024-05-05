@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/navbar.css';
-import logo from '../images/logo-large.png';
+import logo from '../../public/images/logo-large.png';
 import { NavLink, Link } from 'react-router-dom';
 import ResumePDF from '../docs/JunhoPark_Resume.pdf';
 
