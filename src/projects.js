@@ -53,8 +53,8 @@ const PROJECTS = [
         blurbs: [
             <>
                 As a passionate basketball enthusiast, I developed the NBA
-                Simulator, an egaging project that combines my love for the game
-                and my technical expertise. This simulator offers users the
+                Simulator, an engaging project that combines my love for the
+                game and my technical expertise. This simulator offers users the
                 opportunity to step into the shoes of an NBA coach, strategizing
                 and making real-time decisions to lead their team to victory.
                 <br></br>
