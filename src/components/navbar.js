@@ -33,9 +33,17 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsMenuOpen((prev) => !prev); // Ensure we are toggling based on the previous state
+        setIsMenuOpen((prev) => {
+            if (!prev) {
+                // Menu is going to be opened
+                document.body.style.overflow = "hidden";
+            } else {
+                // Menu is going to be closed
+                document.body.style.overflow = "auto";
+            }
+            return !prev;
+        });
     };
-
     return (
         <nav className="navbar">
             <Link to="/" className="logo-link">

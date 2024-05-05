@@ -6,6 +6,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    overflow-x: hidden;
 }
 
 .home-container .info-container {
@@ -96,12 +97,14 @@
     flex-direction: column;
     width: 100%;
     overflow: visible;
+    overflow-x: hidden;
 }
 
 .mobile .home-container .info-container {
     text-align: center;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 15rem;
     width: auto;
     top: 15%;
     left: 0%;
@@ -113,13 +116,14 @@
 }
 
 .mobile .home-container .bg {
+    width: 60vw;
+    height: 60vw;
     position: relative;
-    top: 74%;
+    margin-top: 1.5rem;
+    top: 25%;
     left: 50%;
-    height: 50vw;
-    width: 50vw;
-    animation: unset;
-    overflow: visible;
+    transform: translateX(-50%);
+    animation: none;
 }
 
 .mobile .home-container .info-container .social-links {
@@ -130,7 +134,7 @@
     right: 0;
     z-index: 5; /* Ensuring it's visible above other elements */
     background: #242121; /* Semi-transparent background */
-    padding: 10px 0px 20px 0px; /* Padding for better touch area */
+    padding: 17px 0px 20px 0px; /* Padding for better touch area */
     overflow: hidden;
 }
 

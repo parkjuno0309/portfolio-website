@@ -1,9 +1,22 @@
 .navbar {
     height: 4.5rem;
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    width: 101%;
     display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    background: #242121;
+    box-shadow: 0 2px 5px #242121;
+}
+
+.mobile .navbar {
+    height: 4.5rem;
+    width: 90%;
+    display: flex;
+    padding: 1rem;
     align-items: center;
     justify-content: space-between;
     position: relative;
@@ -15,10 +28,11 @@
 
 .logo {
     object-fit: cover;
-    size: 100px;
-    width: 15rem;
-    margin-right: auto;
-    margin-left: 2rem;
+    size: 165px;
+    width: auto;
+    max-width: 200px;
+    margin-right: 1.5rem;
+    margin-left: 0.8rem;
 }
 
 .menu {
@@ -100,6 +114,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     margin-right: 5rem;
+    text-decoration: none;
 }
 
 .resume-button:hover > a,
@@ -166,7 +181,8 @@
     justify-content: space-between;
     height: 20px;
     width: 30px;
-    margin-right: 1rem; /* Adjust as necessary for spacing */
+    margin: 0.5rem; /* Adjust as necessary for spacing */
+    padding: 0.5rem 1rem;
 }
 
 .hamburger span {
@@ -190,7 +206,7 @@
 }
 
 .mobile .navbar {
-    padding-bottom: 1rem;
+    padding-bottom: 0.7rem;
 }
 .mobile .desktopMenu {
     display: none; /* Hide desktop menu in mobile view */
@@ -198,43 +214,51 @@
 
 .mobile .hamburger {
     display: flex; /* Show hamburger in mobile view */
-    margin-right: 5rem;
+    margin-right: 1.9rem;
+    z-index: 1501;
+    cursor: pointer;
 }
 
 .mobile .menu {
     position: fixed;
-    top: 7rem; /* Increased from 7rem to lower the menu below the navbar */
+    top: 5rem; /* Increased from 7rem to lower the menu below the navbar */
     left: 0;
     right: 0;
-    bottom: 0;
-    margin-right: auto;
+    height: calc(100vh - 4.5rem);
     background-color: #242121;
     width: 100%;
     flex-direction: column;
     justify-content: center; /* Center menu items vertically */
     align-items: center;
     display: none; /* Initially hidden */
-    overflow-y: auto; /* Allows scrolling if many items */
+    overflow: hidden;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 2s ease;
+    z-index: 1500;
 }
 
 .mobile .menu .desktopMenuListItem {
     /* Apply the vertical adjustment to both menu items and the resume button */
-    transform: translateY(-5rem);
+    transform: translateY(-5rem) translateX(1.2rem);
 }
 
 .mobile .menu .resume-button {
-    transform: translateX(2.5rem) translateY(-4rem);
+    transform: translateX(3.7rem) translateY(-4rem);
 }
 
 .mobile .menu.open {
     display: flex; /* Display when open */
     transform: scaleY(1);
-    z-index: 9; /* Ensure it's below the navbar */
+    visibility: visible;
 }
 
-.mobile .navbar {
-    z-index: 10; /* Make sure navbar is always on top */
+.resume-button a:link,
+.resume-button a:visited {
+    text-decoration: none; /* Prevent underlining on normal state */
+}
+
+.resume-button a:hover,
+.resume-button a:active {
+    text-decoration: none; /* Prevent underlining on hover and active states */
 }
