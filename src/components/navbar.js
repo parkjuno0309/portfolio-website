@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/navbar.css";
 import logo from "../images/logo-large.png";
 import { NavLink, Link } from "react-router-dom";
@@ -31,14 +31,26 @@ const ResumeButton = () => {
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     const toggleMenu = () => {
+        if (!isMobile) return; // Prevents toggleMenu in non-mobile views
+
         setIsMenuOpen((prev) => {
             if (!prev) {
-                // Menu is going to be opened
                 document.body.style.overflow = "hidden";
             } else {
-                // Menu is going to be closed
                 document.body.style.overflow = "auto";
             }
             return !prev;
@@ -50,7 +62,6 @@ const Navbar = () => {
                 <img src={logo} alt="Logo" className="logo" />
             </Link>
             <Hamburger isActive={isMenuOpen} toggle={toggleMenu} />{" "}
-            {/* Corrected isActive to reflect actual state */}
             <div className={`menu ${isMenuOpen ? "open" : ""}`}>
                 <NavLink
                     to="/"

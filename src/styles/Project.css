@@ -8,6 +8,7 @@
     animation: slide-left 500ms forwards;
     box-sizing: border-box;
     padding: 3rem 4rem 1rem 4rem; /* Reduced bottom padding */
+    overflow: auto;
 }
 
 /* Back Button Styling */

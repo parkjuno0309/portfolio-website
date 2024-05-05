@@ -1,6 +1,6 @@
 .home-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -18,7 +18,7 @@
     position: relative;
     margin: 2vh 2%; /* Responsive margins */
     top: -5%;
-    left: 9%;
+    left: 55%;
     padding: 0.5vw;
     animation: fade-in 850ms, slide-left 850ms;
 }
@@ -120,7 +120,7 @@
     height: 60vw;
     position: relative;
     margin-top: 1.5rem;
-    top: 25%;
+    top: 28%;
     left: 50%;
     transform: translateX(-50%);
     animation: none;

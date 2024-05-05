@@ -6,6 +6,7 @@
     align-items: center;
     overflow-y: auto; /* Allows scrolling */
     height: calc(100vh - 7rem); /* Full height minus navbar height */
+    overflow-x: hidden;
 }
 
 .experience-container .experience-list {
