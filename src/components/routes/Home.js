@@ -68,16 +68,17 @@ const Home = () => {
                     </h1>
                     <br />
                     <p>
-                        My name is Junho Park, and I am an undergraduate student
-                        majoring in Computer Science with a minor in Data
-                        Science at Northwestern University in Evanston, IL.
+                        My name is Junho Park, and I am a recent graduate with a
+                        Bachelor of Arts in Computer Science with a minor in
+                        Data Science from Northwestern University in Evanston,
+                        IL.
                         <br />
                         <br />
                         I am a passionate developer, curious engineer, and
-                        creative designer born in New York and raised in Seoul,
-                        South Korea. I love traveling and exploring diverse
-                        cultures. Currently, I plan to pursue a career in
-                        software development.
+                        creative designer born in New York City and raised in
+                        Seoul, South Korea. I love exploring new cultures and
+                        getting to know interesting people. Currently, I plan to
+                        pursue a career in software engineering.
                         <br />
                         <br />
                         Welcome to my portfolio website - feel free to explore!

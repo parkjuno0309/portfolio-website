@@ -155,34 +155,12 @@ const PROJECTS = [
         ],
         blurbs: [
             <>
-                You're lookin' at it! I built this website to showcase my skills
-                and experience in a unique and creative way. In fact, the only
-                external libraries that are used in this project are the
-                JavaScript libraries{" "}
-                <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-                    React
-                </a>{" "}
-                and{" "}
-                <a
-                    href="https://reactrouter.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    React Router
-                </a>
-                . The React JavaScript library uses{" "}
-                <a
-                    href="https://reactjs.org/docs/introducing-jsx.html"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    JavaScript XML (JSX)
-                </a>{" "}
-                for rendering document elements, so no template engine is
-                required. And, yes, although it takes more time and effort, no
-                CSS frameworks are in use - only pure custom CSS. The benefits
-                of using minimal external libraries/frameworks are greater
-                control of design and deeper knowledge of programming concepts.
+                I built this portfolio website to showcase my experiences and
+                skills in a creative way using React and React Router. I did not
+                use any CSS frameworks, only using pure custom CSS instead. The
+                benefits of using minimal external libraries/frameworks are
+                greater control of design and deeper knowledge of programming
+                concepts. Feel free to take a look around!
             </>,
         ],
         images: [PortfolioWebsiteImage],
@@ -244,14 +222,18 @@ const PROJECTS = [
         blurbs: [
             <>
                 During the annual 15-112 hackathon at CMU, my team and I
-                developed a project named Spicy Colors Meme Generator, crafted
-                to create customized memes based on user inputs. Within the
-                intense 24-hour development period, we engineered a meme
-                generator that used web scraping and the Python Imaging Library
-                (PIL) to dynamically generate memes. Users could enter a
-                message, word, or phrase into a text box, and the application
-                would produce a meme incorporating the input in a contextually
-                relevant way, whether through image or text.
+                developed a project named Spicy Color Memes. Within the intense
+                24-hour development period, we engineered a meme generator that
+                used web scraping and the Python Imaging Library (PIL) to
+                dynamically display memes based on user input.
+                <br></br>
+                <br></br>
+                All memes are spicy, but every meme has a different level of
+                spice. Our project allows the user to decide which meme is the
+                spiciest based on their own spice scale. Designed as a
+                tournament, the user can select the winner of each matchup to
+                move on to the next round. The winner of the final matchup,
+                crowned as the champion, will be displayed at the end.
                 <br></br>
                 <br></br>
                 This project was not only a creative endeavor but also a
@@ -278,7 +260,7 @@ const PROJECTS = [
         skills: ["DBMS", "SQL", "C++"],
         blurbs: [
             <>
-                In my CS 339 Introduction to Databases class at Carnegie Mellon
+                In my CS 339 Introduction to Databases class at Northwestern
                 University, I developed a relational database management system
                 called BusTub. This project involved creating a robust DBMS from
                 scratch, where I implemented several core components including a
