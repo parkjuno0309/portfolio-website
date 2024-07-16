@@ -18,7 +18,7 @@
     fill: var(--secondary-color);
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .loading-overlay-container {
         width: 100%;
         padding: 0 1rem;
@@ -30,4 +30,14 @@
         max-width: 100%;
         height: auto;
     }
+} */
+
+@media (max-width: 768px) {
+    .loading-overlay-container {
+        display: none;
+    }
+}
+
+.mobile .loading-overlay-container {
+    display: none;
 }
