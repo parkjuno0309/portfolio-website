@@ -47,7 +47,7 @@
     left: 30%; /* Centralize horizontally */
     top: 49.5%; /* Centralize vertically */
     transform: translate(-50%, -50%);
-    border: 5px solid #5cadf8; /* Orange border */
+    border: 5px solid #3fa2ff; /* Orange border */
     z-index: 1;
     animation: fade-in 3.5s;
 }
@@ -146,7 +146,7 @@
     overflow: hidden;
     font-style: italic;
     animation: blink-caret 0.7s step-end infinite;
-    color: #5cadf8;
+    color: #3fa2ff;
     overflow: hidden;
 }
 

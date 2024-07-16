@@ -28,11 +28,12 @@
 
 .logo {
     object-fit: cover;
-    size: 165px;
+    size: 200px;
     width: auto;
     max-width: 200px;
-    margin-right: 1.5rem;
-    margin-left: 0.8rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-top: 2.5rem;
 }
 
 .menu {
@@ -53,8 +54,8 @@
 
 .desktopMenuBtn {
     background: transparent;
-    color: #5cadf8;
-    border: 2px solid #5cadf8;
+    color: #3fa2ff;
+    border: 2px solid #3fa2ff;
     display: inline-block;
     align-items: center;
     justify-content: center;
@@ -68,7 +69,7 @@
 }
 
 .desktopMenuBtn:hover {
-    background: #5cadf8;
+    background: #3fa2ff;
     color: white;
     box-shadow: 0 8px 12px 0 rgba(231, 231, 231, 0.2);
 }
@@ -101,8 +102,8 @@
 /* Resume Button */
 .resume-button > a {
     background: transparent;
-    color: #5cadf8;
-    border: 2px solid #5cadf8;
+    color: #3fa2ff;
+    border: 2px solid #3fa2ff;
     display: inline-block;
     align-items: center;
     justify-content: center;
@@ -127,7 +128,7 @@
 
 /* Ensure that the active state overrides the hover state */
 .navbar .desktopMenuListItem.active:hover {
-    color: #5cadf8;
+    color: #3fa2ff;
 }
 
 .desktopMenuListItem::after {
@@ -137,7 +138,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #5cadf8;
+    background-color: #3fa2ff;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.35s ease-in-out;
@@ -166,12 +167,12 @@
 
 /* Apply active styling */
 .navbar .desktopMenuListItem.active {
-    color: #5cadf8; /* This sets the active link color to yellow */
+    color: #3fa2ff; /* This sets the active link color to yellow */
 }
 
 /* Ensure that the active state overrides the hover state */
 .navbar .desktopMenuListItem.active:hover {
-    color: #5cadf8;
+    color: #3fa2ff;
 }
 
 .hamburger {
