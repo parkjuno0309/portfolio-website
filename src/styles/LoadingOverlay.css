@@ -17,3 +17,17 @@
     margin: 1rem 0 1rem 0;
     fill: var(--secondary-color);
 }
+
+@media (max-width: 768px) {
+    .loading-overlay-container {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .loading-overlay-container > #logo-signature {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
