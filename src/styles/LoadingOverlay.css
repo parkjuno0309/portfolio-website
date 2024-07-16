@@ -1,5 +1,5 @@
 .loading-overlay-container {
-    background: #242121;
+    background: var(--primary-color);
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -11,7 +11,6 @@
     z-index: 1000;
 }
 
-/* TODO: Animate signature */
 .loading-overlay-container > #logo-signature {
     height: 2rem;
     animation: fade-in 1s both, fade-out 500ms 3s forwards;

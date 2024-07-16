@@ -1,11 +1,10 @@
-/* Container for the experiences to allow for scrolling */
 .experience-container {
-    padding-top: 1.9rem; /* Offset for the height of the navbar */
+    padding-top: 1.9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto; /* Allows scrolling */
-    height: calc(100vh - 7rem); /* Full height minus navbar height */
+    overflow-y: auto;
+    height: calc(100vh - 7rem);
     overflow-x: hidden;
 }
 

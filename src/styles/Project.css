@@ -7,15 +7,14 @@
     width: 100%;
     animation: slide-left 500ms forwards;
     box-sizing: border-box;
-    padding: 3rem 4rem 1rem 4rem; /* Reduced bottom padding */
+    padding: 3rem 4rem 1rem 4rem;
     overflow: auto;
 }
 
-/* Back Button Styling */
 .project-container .back-button {
     position: absolute;
-    top: 4rem; /* Adjust according to your design needs */
-    right: 7rem; /* Match the padding of the container */
+    top: 4rem;
+    right: 7rem;
 }
 
 .project-container .back-button .arrow {
@@ -46,7 +45,6 @@
     animation-timing-function: cubic-bezier(0, -1, 1, 2);
 }
 
-/* Project Information Styling */
 .project-container .project-header-row {
     display: flex;
     margin-top: 12px;
@@ -140,7 +138,6 @@
     margin: 10px 30px;
 }
 
-/* Project Image Styling */
 .project-container > .project-image,
 .project-container .website-image-container {
     align-self: center;
@@ -194,7 +191,6 @@
     box-shadow: 0 0 10px black;
 }
 
-/* Project Demo Styling */
 .project-demo {
     display: flex;
     justify-content: center;
@@ -244,11 +240,10 @@
     height: calc((100vw - 4rem) * 0.5625);
 }
 
-/* Back Button Styling */
 .mobile .project-container .back-button {
     position: absolute;
-    top: 8.5rem; /* Adjust according to your design needs */
-    right: 5rem; /* Match the padding of the container */
+    top: 8.5rem;
+    right: 5rem;
 }
 
 .mobile .project-container .project-year {
