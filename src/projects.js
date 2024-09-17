@@ -38,7 +38,7 @@ const PROJECTS = [
     {
         id: "nba-simulator",
         title: "NBA Simulator",
-        year: "2021",
+        year: "2023",
         github: "https://github.com/parkjuno0309/NBA-Simulator",
         link: "https://github.com/parkjuno0309/NBA-Simulator",
         skills: [
@@ -88,7 +88,7 @@ const PROJECTS = [
     {
         id: "score-story",
         title: "Score Story",
-        year: "2023",
+        year: "2024",
         github: "https://github.com/parkjuno0309/ScoreStory",
         link: "https://github.com/parkjuno0309/ScoreStory",
         skills: [
@@ -183,17 +183,19 @@ const PROJECTS = [
         ],
         blurbs: [
             <>
-                During my internship at SparkLab in Seoul, I spearheaded the
-                development of an artificial intelligence system designed to
-                enhance venture capital investment strategies. First, I
-                collected data on startup companies and investment funds in
-                Korea, scraping data from venture capital analysis platforms,
-                including DIVA and DART. Then, utilizing Python, I built an
-                program that analyzed startup growth patterns and forecasted
-                investment returns using regression analysis and artificial
-                intelligence, ensuring our predictions were both accurate and
-                actionable. Further details on this project can not be
-                disclosed.
+                "Know what others don't know, don't let others know what I know"
+                <br></br>
+                <br></br>
+                During my internship at SparkLabs, I worked on the development
+                of a Venture Capital AI that could analyze startups and make
+                recommendations based on analysis, designed to enhance venture
+                capital investment strategies. First, I collected data on
+                startup companies and investment funds in Korea, scraping data
+                from venture capital analysis platforms such as DIVA and DART.
+                Then, utilizing Python, I built a program that analyzed startup
+                growth patterns and forecasted investment returns using
+                regression analysis, ensuring our predictions were both accurate
+                and actionable.
                 <br></br>
                 <br></br>
                 During this internship, in preparation for SparkLabs' Demo Day—
@@ -215,7 +217,7 @@ const PROJECTS = [
     {
         id: "spicy-color-memes",
         title: "Spicy Color Memes",
-        year: "2021-2022",
+        year: "2021",
         github: "https://github.com/parkjuno0309/Spicy-Colors-Meme-Generator",
         link: "https://github.com/parkjuno0309/Spicy-Colors-Meme-Generator",
         skills: ["App Development", "Python", "PIL", "Web Scraping"],
